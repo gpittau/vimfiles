@@ -56,9 +56,6 @@ set statusline=%f       "tail of the filename
 "set statusline+=%{fugitive#statusline()}
 set statusline+=[%{GitBranch()}]
 
-"RVM
-set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
-
 set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
@@ -176,10 +173,18 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
+""set shiftwidth=2
+set shiftwidth=8
+""set softtabstop=2
+set softtabstop=8
+""set expandtab
+set noexpandtab
+""set autoindent
+set noautoindent
+" Local dirs
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+""set undodir=~/.vim/undo
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -230,20 +235,11 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
 
-"map Q to something useful
-noremap Q gq
-
-"make Y consistent with C and D
-nnoremap Y y$
-
 "key mapping for vimgrep result navigation
-map <A-o> :copen<CR>
-map <A-q> :cclose<CR>
-map <A-j> :cnext<CR>
-map <A-k> :cprevious<CR>
-
-"key mapping for Gundo
-nnoremap <F4> :GundoToggle<CR>
+"map <A-o> :copen<CR>
+"map <A-q> :cclose<CR>
+"map <A-j> :cnext<CR>
+"map <A-k> :cprevious<CR>
 
 "visual search mappings
 function! s:VSetSearch()
@@ -301,7 +297,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 "key mapping for saving file
-nmap <C-s> :w<CR>
+"nmap <C-s> :w<CR>
 
 "key mapping for tab navigation
 nmap <Tab> gt
