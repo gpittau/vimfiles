@@ -1,6 +1,3 @@
-"avoiding annoying CSApprox warning message
-let g:CSApprox_verbose_level = 0
-
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype on
 filetype off
@@ -56,7 +53,8 @@ set fo=l
 set statusline=%f       "tail of the filename
 
 "Git
-set statusline+=%{fugitive#statusline()}
+"set statusline+=%{fugitive#statusline()}
+set statusline+=[%{GitBranch()}]
 
 "RVM
 set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
@@ -218,51 +216,6 @@ set ttymouse=xterm2
 "hide buffers when not displayed
 set hidden
 
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
-
-if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
-
-    colorscheme railscasts
-    set guitablabel=%M%t
-    set lines=40
-    set columns=115
-
-    if has("gui_gnome")
-        set term=gnome-256color
-        colorscheme railscasts
-        set guifont=Monospace\ Bold\ 12
-    endif
-
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
-        " key binding for Command-T to behave properly
-        " uncomment to replace the Mac Command-T key to Command-T plugin
-        "macmenu &File.New\ Tab key=<nop>
-        "map <D-t> :CommandT<CR>
-        " make Mac's Option key behave as the Meta key
-    endif
-
-    if has("gui_win32") || has("gui_win32s")
-        set guifont=Consolas:h12
-        set enc=utf-8
-    endif
-else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
-
-    "set railscasts colorscheme when running vim in gnome terminal
-    if $COLORTERM == 'gnome-terminal'
-        set term=gnome-256color
-        colorscheme railscasts
-    else
-        colorscheme default
-    endif
-endif
-
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
@@ -277,22 +230,11 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
 
-"map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
-
 "map Q to something useful
 noremap Q gq
 
 "make Y consistent with C and D
 nnoremap Y y$
-
-"bindings for ragtag
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
-"mark syntax errors with :signs
-let g:syntastic_enable_signs=1
 
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
@@ -302,37 +244,6 @@ map <A-k> :cprevious<CR>
 
 "key mapping for Gundo
 nnoremap <F4> :GundoToggle<CR>
-
-"snipmate setup
-try
-  source ~/.vim/snippets/support_functions.vim
-catch
-  source ~/vimfiles/snippets/support_functions.vim
-endtry
-autocmd vimenter * call s:SetupSnippets()
-function! s:SetupSnippets()
-
-    "if we're in a rails env then read in the rails snippets
-    if filereadable("./config/environment.rb")
-      try
-        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
-      catch
-        call ExtractSnips("~/vimfiles/snippets/ruby-rails", "ruby")
-        call ExtractSnips("~/vimfiles/snippets/eruby-rails", "eruby")
-      endtry
-    endif
-
-    try
-      call ExtractSnips("~/.vim/snippets/html", "eruby")
-      call ExtractSnips("~/.vim/snippets/html", "xhtml")
-      call ExtractSnips("~/.vim/snippets/html", "php")
-    catch
-      call ExtractSnips("~/vimfiles/snippets/html", "eruby")
-      call ExtractSnips("~/vimfiles/snippets/html", "xhtml")
-      call ExtractSnips("~/vimfiles/snippets/html", "php")
-    endtry
-endfunction
 
 "visual search mappings
 function! s:VSetSearch()
@@ -396,28 +307,5 @@ nmap <C-s> :w<CR>
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-"Key mapping for textmate-like indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
-
-"Enabling Zencoding
-let g:user_zen_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'erb' : {
-  \    'extends' : 'html',
-  \  },
- \}
 
