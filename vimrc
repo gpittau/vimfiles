@@ -305,3 +305,5 @@ nmap <S-Tab> gT
 
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
+"disable autoindent in the current file
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
