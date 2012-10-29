@@ -3,7 +3,8 @@ filetype on
 filetype off
 
 "load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
@@ -307,3 +308,7 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
 "disable autoindent in the current file
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+set encoding=utf-8
+
+colorscheme calmar256-dark
