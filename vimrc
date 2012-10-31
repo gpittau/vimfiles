@@ -177,10 +177,9 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-""set shiftwidth=2
-set shiftwidth=8
-""set softtabstop=2
-set softtabstop=8
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 ""set expandtab
 set noexpandtab
 ""set autoindent
@@ -314,4 +313,13 @@ nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
 set encoding=utf-8
 
-colorscheme calmar256-dark
+set background=dark
+"colorscheme calmar256-dark
+"colorscheme mustang
+colorscheme mango
+
+let g:gist_getmultiplefile=1
+
+
+let g:Powerline_symbols='fancy'
+
