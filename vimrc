@@ -70,7 +70,7 @@ set laststatus=2
 set guioptions-=T
 
 "recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
+"autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
 
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
@@ -97,7 +97,7 @@ function! StatuslineCurrentHighlight()
 endfunction
 
 "recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
+"autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
 "return '[&et]' if &et is set wrong
 "return '[mixed-indenting]' if spaces and tabs are used to indent
@@ -119,7 +119,7 @@ function! StatuslineTabWarning()
 endfunction
 
 "recalculate the long line warning when idle and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
+"autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
 
 "return a warning for "long lines" where "long" is either &textwidth or 80 (if
 "no &textwidth is set)
@@ -177,17 +177,17 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 ""set expandtab
-set noexpandtab
+set expandtab
 ""set autoindent
 set noautoindent
 " Local dirs
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-""set undodir=~/.vim/undo
+set undodir=~/.vim/undo
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -291,7 +291,7 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+"autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 "key mapping for window navigation
 map <C-h> <C-w>h
@@ -315,8 +315,8 @@ set encoding=utf-8
 
 set background=dark
 "colorscheme calmar256-dark
-"colorscheme mustang
-colorscheme mango
+colorscheme mustang
+"colorscheme mango
 
 let g:gist_getmultiplefile=1
 
