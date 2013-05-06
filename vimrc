@@ -27,7 +27,7 @@ set hlsearch    "hilight searches by default
 
 set number      "add line numbers
 set showbreak=...
-set wrap linebreak nolist
+set nowrap linebreak nolist
 
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
@@ -187,7 +187,7 @@ set noautoindent
 " Local dirs
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-set undodir=~/.vim/undo
+"set undodir=~/.vim/undo
 
 "folding settings
 set foldmethod=indent   "fold based on indent
