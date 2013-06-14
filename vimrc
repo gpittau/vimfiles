@@ -3,8 +3,9 @@ filetype on
 filetype off
 
 "load pathogen managed plugins
-"call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
+"call pathogen#incubate()
+call pathogen#incubate('~/.vim/bundle/{}')
+call pathogen#infect('~/.vim/bundle/{}')
 
 "256 colors
 set t_Co=256
@@ -322,4 +323,9 @@ let g:gist_getmultiplefile=1
 
 
 let g:Powerline_symbols='fancy'
+
+"Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_javascript_checkers = ['jshint']
 
