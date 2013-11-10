@@ -58,9 +58,6 @@
 [submodule "mango.vim"]
 	path = bundle/mango.vim
 	url = git://github.com/goatslacker/mango.vim.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule "bundle/vim-powerline"]
+[submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
