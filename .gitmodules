@@ -33,36 +33,48 @@
 [submodule "bundle/vim-jquery"]
 	path = bundle/vim-jquery
 	url = git://github.com/itspriddle/vim-jquery.git
+  ignore = dirty
 [submodule "bundle/html5.vim"]
 	path = bundle/html5.vim
 	url = git://github.com/othree/html5.vim.git
+  ignore = dirty
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
+  ignore = dirty
 [submodule "plugin/gist-vim"]
 	path = plugin/gist-vim
 	url = git://github.com/mattn/gist-vim.git
+  ignore = dirty
 [submodule "bundle/vim-yankring"]
 	path = bundle/vim-yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
+  ignore = dirty
 [submodule "bundle/vim-bundler"]
 	path = bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+  ignore = dirty
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
+  ignore = dirty
 [submodule "mango.vim"]
 	path = bundle/mango.vim
 	url = git://github.com/goatslacker/mango.vim.git
+  ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+  ignore = dirty
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+	url = git://github.com/bling/vim-airline.git
+  ignore = dirty
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = git@github.com:tpope/vim-markdown.git
+	url = git://github.com/tpope/vim-markdown.git
+  ignore = dirty
 [submodule "bundle/ag"]
 	path = bundle/ag
-	url = https://github.com/rking/ag.vim
+	url = git://github.com/rking/ag.vim.git
+  ignore = dirty
