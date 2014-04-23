@@ -182,7 +182,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 ""set expandtab
-set expandtab
+set noexpandtab
 ""set autoindent
 set noautoindent
 " Local dirs
@@ -192,7 +192,7 @@ set directory=~/.vim/swaps
 
 "folding settings
 set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+set foldnestmax=6       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
 set wildmode=list:longest   "make cmdline tab completion similar to bash
@@ -292,7 +292,7 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
-"autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 "key mapping for window navigation
 map <C-h> <C-w>h
@@ -329,3 +329,5 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_javascript_checkers = ['jshint']
 
+"Ag
+let g:agprg="/usr/local/bin/ag --column"
