@@ -330,4 +330,4 @@ let g:syntastic_enable_signs=1
 let g:syntastic_javascript_checkers = ['jshint']
 
 "Ag
-let g:agprg="/usr/local/bin/ag --column"
+let g:agprg="/usr/bin/ag --column"
