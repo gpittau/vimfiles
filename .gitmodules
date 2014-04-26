@@ -78,3 +78,6 @@
 	path = bundle/ag
 	url = git://github.com/rking/ag.vim.git
   ignore = dirty
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git
