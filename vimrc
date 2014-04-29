@@ -319,7 +319,7 @@ set background=dark
 colorscheme mustang
 "colorscheme mango
 
-let g:gist_getmultiplefile=1
+let g:gist_get_multiplefile=1
 
 
 let g:Powerline_symbols='fancy'
