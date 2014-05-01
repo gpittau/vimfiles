@@ -331,3 +331,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 "Ag
 let g:agprg="/usr/local/bin/ag --column"
+
+"Tagbar
+let g:tagbar_type_javascript = { 'ctagsbin' : '/home/gpittau/.npm/bin/jsctags' }
