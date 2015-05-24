@@ -319,6 +319,11 @@ set background=dark
 colorscheme mustang
 "colorscheme mango
 
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:airline_powerline_fonts = 1
 let g:gist_get_multiplefile=1
 
 
@@ -327,7 +332,7 @@ let g:Powerline_symbols='fancy'
 "Syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 
 "Ag
 let g:agprg="/usr/bin/ag --column"
