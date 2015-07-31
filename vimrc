@@ -2,6 +2,9 @@
 filetype on
 filetype off
 
+"load local vimrc files
+set exrc
+
 "load pathogen managed plugins
 "call pathogen#incubate()
 call pathogen#incubate('~/.vim/bundle/{}')
