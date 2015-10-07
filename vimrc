@@ -327,7 +327,9 @@ let g:Powerline_symbols='fancy'
 "Syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_always_populate_loc_list = 1
 
 "Ag
 let g:agprg="/usr/bin/ag --column"
