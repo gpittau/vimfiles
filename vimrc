@@ -20,6 +20,8 @@ set backspace=indent,eol,start
 "store lots of :cmdline history
 set history=1000
 
+set exrc "to load project level .vimrc files
+
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
@@ -230,7 +232,7 @@ set hidden
 " nmap <silent> <Leader>q <Plug>PeepOpen
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
+nnoremap <silent> <C-f> :NERDTreeFind<CR>
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -321,8 +323,16 @@ colorscheme mustang
 
 let g:gist_get_multiplefile=1
 
+" Airline configuration
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:Powerline_symbols='fancy'
+let g:airline_powerline_fonts=1
+
+"JSON file type
+autocmd BufNewFile,BufRead *.json set ft=json
 
 "Syntastic
 let g:syntastic_check_on_open=1
@@ -333,3 +343,13 @@ let g:syntastic_always_populate_loc_list = 1
 
 "Ag
 let g:agprg="/usr/bin/ag --column"
+
+"avoid line concealing on vim_json plugin
+let g:vim_json_syntax_conceal = 0
+
+"multiline
+"let g:multi_cursor_use_default_mapping=0
+"let g:multi_cursor_next_key='<C-M>'
+"let g:multi_cursor_prev_key='<C-P>'
+"let g:multi_cursor_skip_key='<C-X>'
+"let g:multi_cursor_quit_key='<Esc>'
