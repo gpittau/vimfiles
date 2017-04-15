@@ -7,7 +7,7 @@ set exrc
 
 "load pathogen managed plugins
 "call pathogen#incubate()
-call pathogen#incubate('~/.vim/bundle/{}')
+"call pathogen#incubate('~/.vim/bundle/{}')
 call pathogen#infect('~/.vim/bundle/{}')
 
 "256 colors
@@ -222,8 +222,10 @@ filetype indent on
 syntax on
 
 "some stuff to get the mouse going in term
-set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+    set mouse=a
+    set ttymouse=xterm2
+endif
 
 "hide buffers when not displayed
 set hidden
