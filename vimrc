@@ -321,8 +321,10 @@ set encoding=utf-8
 
 set background=dark
 "colorscheme calmar256-dark
-colorscheme mustang
+"colorscheme mustang
 "colorscheme mango
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

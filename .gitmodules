@@ -50,10 +50,6 @@
 	path = bundle/vim-yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
   ignore = dirty
-[submodule "bundle/vim-bundler"]
-	path = bundle/vim-bundler
-	url = git://github.com/tpope/vim-bundler.git
-  ignore = dirty
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
@@ -78,15 +74,6 @@
 	path = bundle/ag
 	url = git://github.com/rking/ag.vim.git
   ignore = dirty
-[submodule "bundle/gist-vim"]
-	path = bundle/gist-vim
-	url = git://github.com/mattn/gist-vim.git
-[submodule "bundle/javascript-libraries-syntax.vim"]
-	path = bundle/javascript-libraries-syntax.vim
-	url = https://github.com/othree/javascript-libraries-syntax.vim.git
-[submodule "bundle/tmuxline.vim"]
-	path = bundle/tmuxline.vim
-	url = https://github.com/edkolev/tmuxline.vim
 [submodule "bundle/vim-solidity"]
 	path = bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity.git
