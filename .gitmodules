@@ -1,4 +1,0 @@
-[submodule "plugin/gist-vim"]
-	path = plugin/gist-vim
-	url = git://github.com/mattn/gist-vim.git
-  ignore = dirty
