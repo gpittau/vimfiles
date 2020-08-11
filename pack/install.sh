@@ -45,6 +45,8 @@ package git://github.com/itspriddle/vim-jquery.git &
 package git://github.com/othree/html5.vim.git &
 package git://github.com/tpope/vim-markdown.git &
 package git://github.com/tomlion/vim-solidity.git &
+package git://github.com/MaxMEllon/vim-jsx-pretty.git &
+package git://github.com/jparise/vim-graphql.git &
 wait
 ) &
 (
