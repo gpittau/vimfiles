@@ -38,7 +38,7 @@ function package () {
 }
 (
 set_group syntax
-package git://github.com/scrooloose/syntastic.git &
+package git://github.com/neoclide/coc.nvim.git &
 package git://github.com/bling/vim-airline.git &
 package git://github.com/kchmck/vim-coffee-script.git &
 package git://github.com/itspriddle/vim-jquery.git &
